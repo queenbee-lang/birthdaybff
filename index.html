@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffb6c1, #ffe4e1);
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    .heart {
+      width: 100px;
+      height: 90px;
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+      background: pink;
+      animation: pulse 1s infinite;
+      clip-path: polygon(50% 0%, 100% 35%, 85% 100%, 50% 85%, 15% 100%, 0% 35%);
+    }
+
+    @keyframes pulse {
+      0% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.1); }
+      100% { transform: translate(-50%, -50%) scale(1); }
+    }
+
+    .butterfly {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url('https://i.imgur.com/NjZz0OY.png') no-repeat center;
+      background-size: contain;
+      animation: float 5s infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+      100% { transform: translateY(0); }
+    }
+
+    .lightning {
+      position: absolute;
+      top: 10%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.2);
+      animation: flash 3s infinite;
+    }
+
+    @keyframes flash {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 0.4; }
+    }
+
+    .message {
+      position: absolute;
+      bottom: 20%;
+      width: 100%;
+      font-size: 22px;
+      padding: 0 20px;
+    }
+
+    button {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      font-size: 18px;
+      background: white;
+      color: #ff69b4;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="lightning"></div>
+  <div class="heart"></div>
+  <div class="butterfly" style="top: 20%; left: 20%;"></div>
+  <div class="butterfly" style="top: 50%; left: 70%; animation-delay: 2s;"></div>
+  <div class="butterfly" style="top: 40%; left: 40%; animation-delay: 1s;"></div>
+
+  <div class="message">
+    Happy birthday to the one who always lifts me up when I'm down 🎀🥺
+  </div>
+
+  <button onclick="window.location.href='page2.html'">Next</button>
+</body>
+</html>
